@@ -1,15 +1,165 @@
-/* style.css */
-
+/* Общие стили */
 body {
     font-family: sans-serif;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
-header {
-    background-color: #333;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    /* Пример цвета, замените */
     color: #fff;
-    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    /* Белый фон */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Тень */
+}
+
+/* Main Header */
+.main-header {
+    padding: 15px 0;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo img {
+    max-height: 120px;
+    /* Отрегулируйте размер логотипа */
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    /* Тонкая серая граница */
+    border-radius: 25px;
+    /* Закругленные углы */
+    overflow: hidden;
+    /* Обрезаем все, что выходит за границы */
+    padding: 5px;
+    /* Небольшой внутренний отступ */
+    background-color: #fff;
+    /* Белый фон */
+}
+
+.search-bar input[type="text"] {
+    padding: 8px 15px;
+    /* Увеличиваем внутренний отступ */
+    border: none;
+    /* Убираем границу */
+    outline: none;
+    /* Убираем обводку при фокусе */
+    width: 250px;
+    /* Задаем ширину */
+    font-size: 1em;
+    /* Размер шрифта */
+    color: #333;
+    /* Цвет текста */
+    flex-grow: 1;
+    /* Занимает все доступное пространство */
+    background-color: transparent;
+    /* Прозрачный фон */
+}
+
+.search-bar button {
+    background-color: transparent;
+    /* Прозрачный фон */
+    color: #666;
+    /* Серый цвет иконки */
+    border: none;
+    /* Убираем границу */
+    padding: 8px 15px;
+    /* Увеличиваем внутренний отступ */
+    cursor: pointer;
+    /* Курсор в виде руки */
+    font-size: 1em;
+    /* Размер шрифта */
+    transition: background-color 0.3s ease;
+    /* Плавный переход цвета фона */
+}
+
+.search-bar button:hover {
+    background-color: #f0f0f0;
+    /* Светло-серый фон при наведении */
+}
+
+/* Header Actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.header-actions a {
+    margin-left: 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.header-actions a:hover {
+    color: #007bff;
+    /* Синий цвет при наведении */
+}
+
+.header-actions .cart-icon span {
+    background-color: #dc3545;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: relative;
+    top: -5px;
+    left: 2px;
+}
+
+.header-actions .login-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.header-actions a[href^="tel:"] {
+    display: flex;
+    align-items: center;
+}
+
+.header-actions a[href^="tel:"] i {
+    margin-right: 5px;
+}
+
+/* Navigation */
+nav {
+    background-color: #343a40;
+    /* Темно-серый фон */
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav .container {
+    display: flex;
+    justify-content: center;
+    /* Центрирование навигации */
 }
 
 nav ul {
@@ -17,114 +167,435 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-around;
 }
 
-nav a {
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
     color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+    /* Светло-серый при наведении */
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 0;
+    background-color: #E8EDF1;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .hero-content {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero .hero-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Featured Categories */
+.featured-categories {
+    padding: 60px 0;
+}
+
+.featured-categories h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.featured-categories .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.featured-categories .category-item {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.featured-categories .category-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.featured-categories .category-item h3 {
+    margin-bottom: 10px;
+}
+
+.featured-categories .category-item a {
+    color: #007bff;
     text-decoration: none;
 }
 
-#slider {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 400px; /* Настройте высоту слайдера */
+/* New Arrivals */
+.new-arrivals {
+    padding: 60px 0;
+    background-color: #f8f9fa;
 }
 
-.slide {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Выравнивание по центру */
+.new-arrivals h2 {
     text-align: center;
-
+    margin-bottom: 30px;
 }
 
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Важно для правильного отображения изображений */
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+.new-arrivals .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.slide-content {
-    position: relative;
-    z-index: 2; /* Отображать содержимое поверх изображения */
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+.new-arrivals .product-item {
+    text-align: center;
     padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.new-arrivals .product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.new-arrivals .product-item h3 {
+    margin-bottom: 10px;
+}
+
+.new-arrivals .product-item .price {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    /* Светлый фон, как в header */
+    color: #666;
+    /* Более приглушенный цвет текста */
+    padding: 20px 0;
+    /* Уменьшаем отступы */
+    font-size: 0.9em;
+    /* Уменьшаем размер текста */
+    border-top: 1px solid #ccc;
+    /* Легкая линия сверху */
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    /* Меняем на колонку */
+    align-items: center;
+    /* Центрируем по горизонтали */
+    text-align: center;
+    gap: 15px;
+    /* Добавляем небольшой отступ между блоками */
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    /* Меняем на колонку */
+    align-items: center;
+    /* Центрируем контент внутри */
+    width: 100%;
+    /* Чтобы контент занимал всю ширину */
+    margin-bottom: 15px;
+}
+
+footer .footer-content > div {
+    margin-bottom: 15px;
+    /* Дополнительный отступ между блоками */
+}
+
+footer h3 {
+    font-size: 1em;
+    /* Размер заголовков поменьше */
+    margin-bottom: 10px;
+    /* Уменьшаем отступы */
+    color: #333;
+    /* Темный цвет для заголовков */
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+    /* Отступы между пунктами меню */
+}
+
+footer ul li a {
+    color: #666;
+    /* Цвет ссылок */
+    text-decoration: none;
+}
+
+footer .footer-bottom {
+    font-size: 0.8em;
+    /* Еще немного уменьшаем размер текста */
+    color: #999;
+    /* Более светлый цвет для копирайта */
+    width: 100%;
+    /* Занимает всю ширину */
+    padding-top: 15px;
+    /* Уменьшаем отступ сверху */
+    border-top: 1px solid #e9ecef;
+    /* Линия сверху */
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    header .container {
+        flex-direction: column;
+        /* Изменяем направление на колонку для мобильных устройств */
+        align-items: center;
+        /* Выравниваем по центру */
+    }
+
+    header .logo {
+        margin-bottom: 10px;
+        /* Добавляем отступ снизу логотипа */
+    }
+
+    header nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+        /* Изменяем направление на колонку для мобильных устройств */
+        align-items: center;
+        /* Выравниваем по центру */
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+        /* Уменьшаем отступы между пунктами меню */
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero .hero-content {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .featured-categories .categories-grid,
+    .new-arrivals .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+/* О нас */
+.about-page {
+    padding: 60px 0;
+}
+
+.about-page .container {
     max-width: 800px;
 }
 
-.slide.active {
-    opacity: 1;
-}
-
-#featured-products, #advantages, #news-and-offers {
-    padding: 20px;
+.about-page h2 {
     text-align: center;
+    margin-bottom: 40px;
 }
 
-.product-grid, .advantages-grid, .news-grid {
+/* Company Description */
+.company-description {
+    margin-bottom: 40px;
+}
+
+.company-description h3 {
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+/* Company Advantages */
+.company-advantages {
+    margin-bottom: 40px;
+}
+
+.company-advantages h3 {
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.company-advantages ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.company-advantages ul li {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.product, .advantage, .news-item {
-    width: 300px;
-    margin: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-}
-
-.product img, .advantage img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-}
-
-.button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
     align-items: center;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
 }
 
-.footer-content nav ul {
-    flex-direction: column;
-    align-items: flex-start;
+.company-advantages ul li i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
+    color: #007bff;
 }
 
-.social-icons img {
-    width: 30px;
-    margin: 5px;
+/* Contact Details */
+.contact-details {
+    margin-bottom: 30px;
+}
+
+.contact-details h3 {
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-item i {
+    margin-right: 15px;
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+/* Contact Form */
+.contact-form h3 {
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color var(--transition-duration) ease;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Доставка и оплата */
+.shipping-payment-page {
+    padding: 60px 0;
+    line-height: 1.6; /*  Увеличиваем межстрочный интервал */
+}
+
+.shipping-payment-page .container {
+    max-width: 800px;
+}
+
+.shipping-payment-page h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.shipping-section,
+.payment-section {
+    margin-bottom: 30px;
+}
+
+.shipping-section h3,
+.payment-section h3 {
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.shipping-section ul,
+.payment-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.shipping-payment-page ul li {
+    margin-bottom: 0.7em;
+    padding-left: 30px; /*  Для иконок */
+    position: relative;
+}
+
+.shipping-section ul li i,
+.payment-section ul li i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
+    color: #007bff;
+}
+
+.shipping-payment-page p {
+    margin-bottom: 1.2em;  /*  Увеличиваем отступ снизу для абзацев */
 }

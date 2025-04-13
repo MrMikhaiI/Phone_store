@@ -1,111 +1,137 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная страница - Магазин Телефонов</title>
+    <title>Главная - Binary Bloom</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
 
+<body>
     <header>
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/Снимок экрана 2025-04-13 в 13.27.12.png" alt="Логотип">
+                    </a>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Поиск по сайту...">
+                    <button><i class="fa fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <a href="tel:+74951234567"><i class="fa fa-phone"></i> +7 (495) 123-45-67</a>
+                    <a href="#" class="cart-icon"><i class="fa fa-shopping-cart"></i><span>0</span></a>
+                    <a href="#" class="login-button">Войти</a>
+                </div>
+            </div>
+        </div>
         <nav>
-            <ul>
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Бренды</a></li>
-                <li><a href="#">Типы телефонов</a></li>
-                <li><a href="#">Ценовой диапазон</a></li>
-                <li><a href="#">Акции</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
+            <div class="container">
+                <ul>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="shipping-payment.html">Доставка и оплата</a></li>
+                    <li><a href="contact.html">О нас</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <section id="slider">
-        <!-- Слайдер изображений -->
-        <div class="slide">
-            <img src="" alt="Акция на iPhone 16">
-            <div class="slide-content">
-                <h2>iPhone 16 по супер цене!</h2>
-                <p>Не упустите шанс купить новый iPhone 16 со скидкой.</p>
-                <a href="#" class="button">Подробнее</a>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Новейшие смартфоны по лучшим ценам</h1>
+                <p>Широкий выбор телефонов от ведущих брендов. Гарантия качества и быстрая доставка.</p>
+                <a href="#" class="button">Смотреть каталог</a>
             </div>
-        </div>
-        <div class="slide">
-            <img src="" alt="Новинка Samsung Galaxy S25">
-            <div class="slide-content">
-                <h2>Samsung Galaxy S25 уже в продаже!</h2>
-                <p>Оцените все преимущества нового флагмана от Samsung.</p>
-                <a href="#" class="button">Купить сейчас</a>
+            <div class="hero-image">
+                <img src="images/cc099a099547c844347a32e9282a7c23.jpg" alt="Смартфон">
             </div>
         </div>
     </section>
 
-    <section id="featured-products">
-        <h2>Популярные модели</h2>
-        <div class="product-grid">
-            <div class="product">
-                <img src="" alt="Samsung Galaxy S24">
-                <h3>Samsung Galaxy S24</h3>
-                <p>Описание продукта...</p>
-                <span class="price">79 990 ₽</span>
-                <a href="#" class="button">В корзину</a>
-            </div>
-            <div class="product">
-                <img src="" alt="Xiaomi Redmi Note 14">
-                <h3>Xiaomi Redmi Note 14</h3>
-                <p>Описание продукта...</p>
-                <span class="price">19 990 ₽</span>
-                <a href="#" class="button">В корзину</a>
-            </div>
-            <!-- Добавьте больше товаров -->
-        </div>
-    </section>
-
-    <section id="advantages">
-        <h2>Наши преимущества</h2>
-        <div class="advantages-grid">
-            <div class="advantage">
-                <img src="" alt="Бесплатная доставка">
-                <h3>Бесплатная доставка</h3>
-                <p>При заказе от 5000 ₽.</p>
-            </div>
-            <div class="advantage">
-                <img src="" alt="Гарантия 2 года">
-                <h3>Гарантия 2 года</h3>
-                <p>На все телефоны.</p>
-            </div>
-            <div class="advantage">
-                <img src="" alt="Квалифицированная консультация">
-                <h3>Квалифицированная консультация</h3>
-                <p>Поможем выбрать телефон.</p>
+    <section class="featured-categories">
+        <div class="container">
+            <h2>Популярные категории</h2>
+            <div class="categories-grid">
+                <div class="category-item">
+                    <img src="images/Снимок экрана 2025-04-12 в 12.58.29.png" alt="iPhone">
+                    <h3>iPhone</h3>
+                    <a href="#">Смотреть все</a>
+                </div>
+                <div class="category-item">
+                    <img src="images/galaxy-s22-ultra-leak-image.jpg" alt="Samsung">
+                    <h3>Samsung</h3>
+                    <a href="#">Смотреть все</a>
+                </div>
+                <div class="category-item">
+                    <img src="images/Снимок экрана 2025-04-12 в 13.01.06.png" alt="Xiaomi">
+                    <h3>Xiaomi</h3>
+                    <a href="#">Смотреть все</a>
+                </div>
+                <!-- Добавьте больше категорий -->
             </div>
         </div>
     </section>
 
-    <section id="news-and-offers">
-        <h2>Новости и акции</h2>
-        <div class="news-grid">
-            <div class="news-item">
-                <h3>Скидки на аксессуары!</h3>
-                <p>Скидки до 50% на чехлы, стекла и наушники.</p>
-                <a href="#">Подробнее</a>
-            </div>
-            <div class="news-item">
-                <h3>Новые поступления телефонов</h3>
-                <p>В продаже появились новые модели от ведущих брендов.</p>
-                <a href="#">Подробнее</a>
+    <section class="new-arrivals">
+        <div class="container">
+            <h2>Новинки</h2>
+            <div class="products-grid">
+                <div class="product-item">
+                    <img src="images/Снимок экрана 2025-04-12 в 13.02.png" alt="Телефон 1">
+                    <h3>Iphone 16e</h3>
+                    <p class="price">55 000 ₽</p>
+                    <a href="#" class="button">Подробнее</a>
+                </div>
+                <div class="product-item">
+                    <img src="images/Снимок экрана 2025-04-12 в 13.15.16.png" alt="Телефон 2">
+                    <h3>Название телефона 2</h3>
+                    <p class="price">35 000 ₽</p>
+                    <a href="#" class="button">Подробнее</a>
+                </div>
+                <div class="product-item">
+                    <img src="images/Снимок экрана 2025-04-12 в 13.24.png" alt="Телефон 3">
+                    <h3>Название телефона 3</h3>
+                    <p class="price">45 000 ₽</p>
+                    <a href="#" class="button">Подробнее</a>
+                </div>
+                <!-- Добавьте больше товаров -->
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <p>© 2023 Магазин Телефонов. Все права защищены.</p>
-                        </div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>О магазине</h3>
+                    <p>Мы предлагаем широкий выбор смартфонов по доступным ценам. Всегда рады видеть вас в нашем магазине!</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                        <li><a href="#">Возврат</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Контакты</h3>
+                    <p>Телефон: +7 (495) 123-45-67</p>
+                    <p>Email: info@example.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Binary Bloom. Все права защищены.</p>
+            </div>
         </div>
     </footer>
-
 </body>
+
 </html>
