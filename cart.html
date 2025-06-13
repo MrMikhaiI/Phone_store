@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Доставка и оплата - Binary Bloom</title>
+    <title>Корзина - Интернет-магазин телефонов</title>
     <meta name="description" content="Binary Bloom — магазин смартфонов. Apple, Samsung, Xiaomi по лучшим ценам. Доставка по всей России.">
     <meta name="keywords" content="смартфоны, купить телефон, iPhone, Samsung, Xiaomi, доставка">
     <link rel="stylesheet" href="style.css">
@@ -11,7 +11,7 @@
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </head>
 <body>
 
@@ -55,59 +55,53 @@
         </nav>
     </header>
 
-    <section class="shipping-payment-page">
+    <section class="cart-page">
         <div class="container">
-            <h2>Доставка и оплата</h2>
+            <h2>Корзина</h2>
 
-            <div class="shipping-section">
-                <h3>Условия доставки</h3>
-                <p>Мы предлагаем следующие способы доставки:</p>
-                <ul>
-                    <li>
-                        <i class="fas fa-truck"></i>
-                        Курьерская доставка по Москве и Московской области:
-                        <ul>
-                            <li>Стоимость: от 300 рублей, в зависимости от адреса.</li>
-                            <li>Сроки: 1-2 рабочих дня.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <i class="fas fa-shipping-fast"></i>
-                        Доставка по России транспортными компаниями:
-                        <ul>
-                            <li>Стоимость: рассчитывается индивидуально, в зависимости от тарифов ТК и веса/размеров посылки.</li>
-                            <li>Сроки: от 2 до 14 рабочих дней, в зависимости от региона.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <i class="fas fa-store"></i>
-                        Самовывоз:
-                        <ul>
-                            <li>Бесплатно из нашего магазина по адресу: Москва, ул. Примерная, д. 123.</li>
-                            <li>Перед самовывозом необходимо уточнить наличие товара и оформить заказ.</li>
-                        </ul>
-                    </li>
-                </ul>
+            <div class="cart-items">
+                <!-- Товары будут добавляться динамически через JS -->
+                <div class="empty-cart-message" style="text-align: center; padding: 40px; display: none;">
+                    <i class="fas fa-shopping-cart" style="font-size: 50px; color: #ddd; margin-bottom: 20px;"></i>
+                    <h3>Ваша корзина пуста</h3>
+                    <p>Перейдите в <a href="catalog.html">каталог</a>, чтобы добавить товары</p>
+                </div>
             </div>
 
-            <div class="payment-section">
-                <h3>Способы оплаты</h3>
-                <p>Мы принимаем следующие способы оплаты:</p>
-                <ul>
-                    <li>
-                        <i class="fas fa-credit-card"></i>
-                        Оплата банковской картой (Visa, Mastercard, Мир) онлайн на сайте.
-                    </li>
-                    <li>
-                        <i class="fas fa-money-bill-alt"></i>
-                        Наличными курьеру (только при курьерской доставке по Москве и МО).
-                    </li>
-                    <li>
-                        <i class="fas fa-money-check-alt"></i>
-                        Оплата по счету (для юридических лиц).
-                    </li>
-                </ul>
-                <p>Подробности оплаты вы можете уточнить у менеджера при подтверждении заказа.</p>
+            <div class="shipping-info">
+                <h3>Информация о доставке</h3>
+                <div class="form-group">
+                    <label for="delivery-method">Способ доставки:</label>
+                    <select id="delivery-method" name="delivery-method">
+                        <option value="courier">Курьерская доставка</option>
+                        <option value="pickup">Самовывоз</option>
+                        <option value="post">Почта России</option>
+                        <option value="cdek">CDEK</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="address">Адрес доставки:</label>
+                    <textarea id="address" name="address" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="promo-code">
+                <h3>Промокод</h3>
+                <div class="form-group">
+                    <label for="promo-code">Введите промокод:</label>
+                    <input type="text" id="promo-code" name="promo-code">
+                </div>
+            </div>
+
+            <div class="cart-total">
+                <p class="total-price">Итого: 55 000 ₽</p> <!-- Динамически обновляется JS -->
+            </div>
+
+            <div class="checkout-button">
+                <a href="#" class="button">Оформить заказ</a>
+            </div>
+            <div id="confirmationMessage" style="display: none; background-color: lightgreen; padding: 10px; border: 1px solid green; margin-top: 10px;">
+                Спасибо! Ваш заказ оформлен.
             </div>
         </div>
     </section>

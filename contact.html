@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О нас - Binary Bloom</title>
+    <meta name="description" content="Binary Bloom — магазин смартфонов. Apple, Samsung, Xiaomi по лучшим ценам. Доставка по всей России.">
+    <meta name="keywords" content="смартфоны, купить телефон, iPhone, Samsung, Xiaomi, доставка">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
         integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -26,15 +29,25 @@
                 </div>
                 <div class="header-actions">
                     <a href="tel:+74951234567"><i class="fa fa-phone"></i> +7 (495) 123-45-67</a>
-                    <a href="#" class="cart-icon"><i class="fa fa-shopping-cart"></i><span>0</span></a>
-                    <a href="#" class="login-button">Войти</a>
+                    <a href="cart.html" class="cart-icon"><i class="fa fa-shopping-cart"></i><span>0</span></a>
+                    
+                    <!-- Кнопка входа -->
+                    <a href="login.html" class="login-button login-link">Войти</a>
+                    
+                    <!-- Блок пользователя -->
+                    <div class="user-avatar" style="display: none;">
+                        <img src="images/Circle-icons-profile.svg.png" alt="Аватарка" width="30" height="30" 
+                             style="border-radius: 50%; margin-right: 5px;">
+                        <span class="username-display"></span>
+                        <button class="logout-btn" style="margin-left: 10px;">Выйти</button>
+                    </div>
                 </div>
             </div>
         </div>
         <nav>
             <div class="container">
                 <ul>
-                    <li><a href="#">Каталог</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
                     <li><a href="shipping-payment.html">Доставка и оплата</a></li>
                     <li><a href="contact.html">О нас</a></li>
                 </ul>
@@ -105,9 +118,9 @@
                                     <div class="footer-links">
                                         <h3>Информация</h3>
                                         <ul>
-                                            <li><a href="#">Доставка и оплата</a></li>
-                                            <li><a href="#">Гарантия</a></li>
-                                            <li><a href="#">Возврат</a></li>
+                                            <li><a href="shipping-payment.html">Доставка и оплата</a></li>
+                                            <li><a href="shipping-payment.html">Гарантия</a></li>
+                                            <li><a href="shipping-payment.html">Возврат</a></li>
                                         </ul>
                                     </div>
                                     <div class="footer-contact">

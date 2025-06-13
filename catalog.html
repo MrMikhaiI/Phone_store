@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог - Binary Bloom</title>
+    <meta name="description" content="Binary Bloom — магазин смартфонов. Apple, Samsung, Xiaomi по лучшим ценам. Доставка по всей России.">
+    <meta name="keywords" content="смартфоны, купить телефон, iPhone, Samsung, Xiaomi, доставка">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="main-header">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/Снимок экрана 2025-04-13 в 13.27.12.png" alt="Логотип">
+                    </a>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Поиск по сайту...">
+                    <button><i class="fa fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <a href="tel:+74951234567"><i class="fa fa-phone"></i> +7 (495) 123-45-67</a>
+                    <a href="cart.html" class="cart-icon"><i class="fa fa-shopping-cart"></i><span>0</span></a>
+                    
+                    <!-- Кнопка входа -->
+                    <a href="login.html" class="login-button login-link">Войти</a>
+                    
+                    <!-- Блок пользователя -->
+                    <div class="user-avatar" style="display: none;">
+                        <img src="images/Circle-icons-profile.svg.png" alt="Аватарка" width="30" height="30" 
+                             style="border-radius: 50%; margin-right: 5px;">
+                        <span class="username-display"></span>
+                        <button class="logout-btn" style="margin-left: 10px;">Выйти</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <ul>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="shipping-payment.html">Доставка и оплата</a></li>
+                    <li><a href="contact.html">О нас</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="catalog-page">
+        <div class="search-results" style="margin-bottom: 20px; display: none;">
+            <h3>Результаты поиска: "<span id="search-query"></span>"</h3>
+            <button id="clear-search" class="button">Сбросить поиск</button>
+          </div>
+        <div class="container">
+            <h2>Каталог</h2>
+
+            <div class="catalog-filters">
+                <!-- Фильтры будут здесь -->
+                <h3>Фильтры</h3>
+                <div class="filter-group">
+                    <label for="brand-filter">Бренд:</label>
+                    <select id="brand-filter">
+                        <option value="">Все</option>
+                        <option value="apple">Apple</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="xiaomi">Xiaomi</option>
+                        <!-- Добавьте другие бренды -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-filter">Цена:</label>
+                    <select id="price-filter">
+                        <option value="">Все</option>
+                        <option value="0-50000">До 50 000 ₽</option>
+                        <option value="50000-100000">50 000 - 100 000 ₽</option>
+                        <option value="100000+">Свыше 100 000 ₽</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="catalog-products">
+                <div class="product-item" data-brand="apple">
+                    <div class="product-image-container">
+                        <img src="images/Снимок экрана 2025-04-12 в 13.02-fotor-bg-remover-2025061312404.png" alt="Iphone 16e">
+                    </div>
+                    <h3>Iphone 16e</h3>
+                    <p class="price">55 000 ₽</p>
+                    <a href="product.html?id=iphone-16e" class="button">Подробнее</a>
+                </div>
+                <div class="product-item" data-brand="samsung">
+                    <div class="product-image-container">
+                        <img src="images/Снимок экрана 2025-05-10 в 16.29.47.png" alt="Samsung Galaxy S25 Ultra">
+                    </div>
+                    <h3>Samsung Galaxy S25 Ultra</h3>
+                    <p class="price">90 000 ₽</p>
+                    <a href="product.html?id=samsung-s25-ultra" class="button">Подробнее</a>
+                </div>
+                <div class="product-item" data-brand="xiaomi">
+                    <div class="product-image-container">
+                        <img src="images/Снимок экрана 2025-04-12 в 13.24.png" alt="Xiaomi Redmi Note 14">
+                    </div>
+                    <h3>Xiaomi Redmi Note 14</h3>
+                    <p class="price">15 000 ₽</p>
+                    <a href="product.html?id=xiaomi-redmi-note-14" class="button">Подробнее</a>
+                </div>
+
+                <!-- Изменить информацию телефонов -->
+
+                <div class="product-item" data-brand="xiaomi">
+                    <div class="product-image-container">
+                        <img src="images/xiaomi15_ultra.png" alt="Xiaomi 15 Ultra">
+                    </div>
+                    <h3>Xiaomi 15 Ultra</h3>
+                    <p class="price">105 000 ₽</p>
+                    <a href="product.html?id=xiaomi-15-ultra" class="button">Подробнее</a>
+                </div>
+                <div class="product-item" data-brand="apple">
+                    <div class="product-image-container">
+                        <img src="images/Снимок экрана 2025-05-10 в 15.48.28.png" alt="Iphone 15 Pro Max">
+                    </div>
+                    <h3>Iphone 15 Pro Max</h3>
+                    <p class="price">107 000 ₽</p>
+                    <a href="#" class="button">Подробнее</a>
+                </div>
+                <div class="product-item" data-brand="apple">
+                    <div class="product-image-container">
+                        <img src="images/go8o1inkxhae9h5x0eoyt1kmpc0t9esm.jpg" alt="Iphone 16">
+                    </div>
+                    <h3>Iphone 16</h3>
+                    <p class="price">65 000 ₽</p>
+                    <a href="#" class="button">Подробнее</a>
+                </div>
+                <div class="product-item" data-brand="samsung">
+                    <div class="product-image-container">
+                        <img src="images/Снимок экрана 2025-05-10 в 15.50.54.png" alt="Samsung S24 Ultra">
+                    </div>
+                    <h3>Samsung Galaxy S24 Ultra</h3>
+                    <p class="price">68 000 ₽</p>
+                    <a href="#" class="button">Подробнее</a>
+                </div>
+                <div class="product-item" data-brand="apple">
+                    <div class="product-image-container">
+                        <img src="images/Снимок экрана 2025-05-10 в 16.21.24-fotor-bg-remover-20250510162214.png" alt="Iphone 14 Pro Max">
+                    </div>
+                    <h3>Iphone 14 Pro Max</h3>
+                    <p class="price">62 000 ₽</p>
+                    <a href="#" class="button">Подробнее</a>
+                </div>
+                <!-- Добавьте больше товаров -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>О магазине</h3>
+                    <p>Мы предлагаем широкий выбор смартфонов по доступным ценам. Всегда рады видеть вас в нашем
+                        магазине!</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="shipping-payment.html">Доставка и оплата</a></li>
+                        <li><a href="shipping-payment.html">Гарантия</a></li>
+                        <li><a href="shipping-payment.html">Возврат</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Контакты</h3>
+                    <p>Телефон: +7 (495) 123-45-67</p>
+                    <p>Email: info@example.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Binary Bloom. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Доставка и оплата - Binary Bloom</title>
+    <title>Вход - Binary Bloom</title>
     <meta name="description" content="Binary Bloom — магазин смартфонов. Apple, Samsung, Xiaomi по лучшим ценам. Доставка по всей России.">
     <meta name="keywords" content="смартфоны, купить телефон, iPhone, Samsung, Xiaomi, доставка">
     <link rel="stylesheet" href="style.css">
@@ -13,6 +14,7 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script src="script.js" defer></script>
 </head>
+
 <body>
 
     <header>
@@ -55,59 +57,22 @@
         </nav>
     </header>
 
-    <section class="shipping-payment-page">
+    <section class="login-page">
         <div class="container">
-            <h2>Доставка и оплата</h2>
+            <h2>Вход</h2>
 
-            <div class="shipping-section">
-                <h3>Условия доставки</h3>
-                <p>Мы предлагаем следующие способы доставки:</p>
-                <ul>
-                    <li>
-                        <i class="fas fa-truck"></i>
-                        Курьерская доставка по Москве и Московской области:
-                        <ul>
-                            <li>Стоимость: от 300 рублей, в зависимости от адреса.</li>
-                            <li>Сроки: 1-2 рабочих дня.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <i class="fas fa-shipping-fast"></i>
-                        Доставка по России транспортными компаниями:
-                        <ul>
-                            <li>Стоимость: рассчитывается индивидуально, в зависимости от тарифов ТК и веса/размеров посылки.</li>
-                            <li>Сроки: от 2 до 14 рабочих дней, в зависимости от региона.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <i class="fas fa-store"></i>
-                        Самовывоз:
-                        <ul>
-                            <li>Бесплатно из нашего магазина по адресу: Москва, ул. Примерная, д. 123.</li>
-                            <li>Перед самовывозом необходимо уточнить наличие товара и оформить заказ.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="payment-section">
-                <h3>Способы оплаты</h3>
-                <p>Мы принимаем следующие способы оплаты:</p>
-                <ul>
-                    <li>
-                        <i class="fas fa-credit-card"></i>
-                        Оплата банковской картой (Visa, Mastercard, Мир) онлайн на сайте.
-                    </li>
-                    <li>
-                        <i class="fas fa-money-bill-alt"></i>
-                        Наличными курьеру (только при курьерской доставке по Москве и МО).
-                    </li>
-                    <li>
-                        <i class="fas fa-money-check-alt"></i>
-                        Оплата по счету (для юридических лиц).
-                    </li>
-                </ul>
-                <p>Подробности оплаты вы можете уточнить у менеджера при подтверждении заказа.</p>
+            <div id="login-form">
+                <form id="login-submit">
+                    <div class="form-group">
+                        <label for="login-username">Логин:</label>
+                        <input type="text" id="login-username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Пароль:</label>
+                        <input type="password" id="login-password" name="password" required>
+                    </div>
+                    <button type="submit">Войти</button>
+                </form>
             </div>
         </div>
     </section>
@@ -117,7 +82,8 @@
             <div class="footer-content">
                 <div class="footer-about">
                     <h3>О магазине</h3>
-                    <p>Мы предлагаем широкий выбор смартфонов по доступным ценам. Всегда рады видеть вас в нашем магазине!</p>
+                    <p>Мы предлагаем широкий выбор смартфонов по доступным ценам. Всегда рады видеть вас в нашем
+                        магазине!</p>
                 </div>
                 <div class="footer-links">
                     <h3>Информация</h3>
@@ -139,4 +105,5 @@
         </div>
     </footer>
 </body>
+
 </html>

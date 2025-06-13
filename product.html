@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Доставка и оплата - Binary Bloom</title>
+    <title>Название телефона - Binary Bloom</title>
     <meta name="description" content="Binary Bloom — магазин смартфонов. Apple, Samsung, Xiaomi по лучшим ценам. Доставка по всей России.">
     <meta name="keywords" content="смартфоны, купить телефон, iPhone, Samsung, Xiaomi, доставка">
     <link rel="stylesheet" href="style.css">
@@ -12,9 +13,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <script src="script.js" defer></script>
-</head>
-<body>
 
+</head>
+
+<body>
     <header>
         <div class="main-header">
             <div class="container">
@@ -41,7 +43,7 @@
                         <span class="username-display"></span>
                         <button class="logout-btn" style="margin-left: 10px;">Выйти</button>
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
         <nav>
@@ -55,59 +57,67 @@
         </nav>
     </header>
 
-    <section class="shipping-payment-page">
+    <section class="product-page">
         <div class="container">
-            <h2>Доставка и оплата</h2>
-
-            <div class="shipping-section">
-                <h3>Условия доставки</h3>
-                <p>Мы предлагаем следующие способы доставки:</p>
-                <ul>
-                    <li>
+            <div class="product-main">
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="main-product-image" src="" alt="Основное изображение товара">
+                    </div>
+                    <div class="thumbnail-images">
+                        <!-- Миниатюры будут добавляться через JS -->
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h1 id="product-title">Название телефона</h1>
+                    <div class="product-meta">
+                        <span class="product-brand" id="product-brand">Бренд</span>
+                        <span class="product-code">Код: <span id="product-code">XXXXXX</span></span>
+                    </div>
+                    <div class="product-price">
+                        <span id="product-price">00 000 ₽</span>
+                    </div>
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" class="quantity-input">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="button add-to-cart">В корзину</button>
+                    </div>
+                    <div class="product-delivery">
                         <i class="fas fa-truck"></i>
-                        Курьерская доставка по Москве и Московской области:
-                        <ul>
-                            <li>Стоимость: от 300 рублей, в зависимости от адреса.</li>
-                            <li>Сроки: 1-2 рабочих дня.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <i class="fas fa-shipping-fast"></i>
-                        Доставка по России транспортными компаниями:
-                        <ul>
-                            <li>Стоимость: рассчитывается индивидуально, в зависимости от тарифов ТК и веса/размеров посылки.</li>
-                            <li>Сроки: от 2 до 14 рабочих дней, в зависимости от региона.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <i class="fas fa-store"></i>
-                        Самовывоз:
-                        <ul>
-                            <li>Бесплатно из нашего магазина по адресу: Москва, ул. Примерная, д. 123.</li>
-                            <li>Перед самовывозом необходимо уточнить наличие товара и оформить заказ.</li>
-                        </ul>
-                    </li>
-                </ul>
+                        <span>Доставка: 1-3 дня</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="payment-section">
-                <h3>Способы оплаты</h3>
-                <p>Мы принимаем следующие способы оплаты:</p>
-                <ul>
-                    <li>
-                        <i class="fas fa-credit-card"></i>
-                        Оплата банковской картой (Visa, Mastercard, Мир) онлайн на сайте.
-                    </li>
-                    <li>
-                        <i class="fas fa-money-bill-alt"></i>
-                        Наличными курьеру (только при курьерской доставке по Москве и МО).
-                    </li>
-                    <li>
-                        <i class="fas fa-money-check-alt"></i>
-                        Оплата по счету (для юридических лиц).
-                    </li>
-                </ul>
-                <p>Подробности оплаты вы можете уточнить у менеджера при подтверждении заказа.</p>
+            <div class="product-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="description">Описание</button>
+                    <button class="tab-btn" data-tab="specs">Характеристики</button>
+                    <button class="tab-btn" data-tab="reviews">Отзывы</button>
+                </div>
+                <div class="tabs-content">
+                    <div id="description" class="tab-pane active">
+                        <h3>Описание товара</h3>
+                        <div id="product-description">
+                            <!-- Описание будет заполняться через JS -->
+                        </div>
+                    </div>
+                    <div id="specs" class="tab-pane">
+                        <h3>Технические характеристики</h3>
+                        <table class="specs-table">
+                            <!-- Характеристики будут заполняться через JS -->
+                        </table>
+                    </div>
+                    <div id="reviews" class="tab-pane">
+                        <h3>Отзывы</h3>
+                        <div class="reviews-container">
+                            <p>Пока нет отзывов. Будьте первым!</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -138,5 +148,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="product.js"></script>
 </body>
 </html>
